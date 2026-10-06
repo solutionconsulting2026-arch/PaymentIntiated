@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IndusInd Bank | Account Funding Payment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Accent & Clean Header with Official IndusInd Bank Logo -->
+  <header class="site-header">
+    <div class="header-top-accent"></div>
+    <div class="header-inner">
+      <div class="brand-wrapper">
+        <!-- IndusInd Bank Logo Image from user upload -->
+        <img src="assets/indusind_logo.png" alt="IndusInd Bank" class="brand-logo-img">
+
+        <div class="header-divider"></div>
+        <div class="portal-tag">
+          <span class="portal-title">Secure Payment Gateway</span>
+          <span class="portal-sub">CRM Initiated Checkout</span>
+        </div>
+      </div>
+
+      <div class="header-right-meta">
+        <div class="crm-badge">
+          <span class="dot"></span>
+          <span>CRM Lead: <strong id="dispCrmLeadBadge">20964</strong></span>
+        </div>
+        <div class="security-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span>256-Bit SSL</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="page-container">
+
+    <!-- VIEW 1: PAYMENT SCREEN -->
+    <div id="paymentView" class="view-active">
+      
+      <!-- Top CRM Info Ribbon (Showing Mobile & Dynamic Lead ID from Link) -->
+      <div class="customer-ribbon">
+        <div class="customer-info">
+          <div class="avatar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+          </div>
+          <div>
+            <h2 class="customer-mobile">+91 98••••4321</h2>
+            <p class="customer-meta">Application Ref: <strong>IND-2026-9482103</strong> &bull; CRM Lead: <strong id="dispCrmLeadRibbon">20964</strong></p>
+          </div>
+        </div>
+        <div class="ribbon-right">
+          <span class="account-tag">Indus Delite Savings Account</span>
+        </div>
+      </div>
+
+      <!-- Payment 2-Column Grid -->
+      <div class="checkout-grid">
+
+        <!-- LEFT: Payment Methods -->
+        <div class="payment-methods-card">
+          <div class="card-header">
+            <h3>Select Payment Option</h3>
+            <span class="secure-label">RBI Compliant Payment Rail</span>
+          </div>
+
+          <!-- Tabs Nav -->
+          <div class="payment-nav-tabs">
+            <button class="nav-tab-btn active" data-tab="tabUpi">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+              <span>UPI</span>
+              <span class="tab-pill-badge">Instant</span>
+            </button>
+
+            <button class="nav-tab-btn" data-tab="tabCard">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              <span>Debit Card</span>
+            </button>
+
+            <button class="nav-tab-btn" data-tab="tabNetBanking">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4 10h3v7H4zM10.5 10h3v7h-3zM2 19h20v3H2zM17 10h3v7h-3zM12 1L2 6v2h20V6z"/></svg>
+              <span>Net Banking</span>
+            </button>
+          </div>
+
+          <!-- TAB 1: UPI -->
+          <div class="tab-content active" id="tabUpi">
+            <!-- Sub tabs for UPI -->
+            <div class="upi-pills-row">
+              <button type="button" class="upi-sub-btn active" data-sub="apps">UPI Apps</button>
+              <button type="button" class="upi-sub-btn" data-sub="vpa">UPI ID (VPA)</button>
+              <button type="button" class="upi-sub-btn" data-sub="qr">Scan QR</button>
+            </div>
+
+            <!-- UPI Sub 1: Apps with REAL LOGOS -->
+            <div id="upiSubApps" class="upi-sub-view active">
+              <p class="section-hint">Select your preferred UPI app to open and authorize payment:</p>
+              <div class="upi-apps-grid">
+                <!-- Google Pay -->
+                <div class="upi-app-tile active" data-app="Google Pay">
+                  <div class="app-icon">
+                    <img src="assets/gpay.svg" alt="Google Pay" class="app-logo-img">
+                  </div>
+                  <span class="app-label">Google Pay</span>
+                </div>
+
+                <!-- PhonePe -->
+                <div class="upi-app-tile" data-app="PhonePe">
+                  <div class="app-icon">
+                    <img src="assets/phonepe.svg" alt="PhonePe" class="app-logo-img">
+                  </div>
+                  <span class="app-label">PhonePe</span>
+                </div>
+
+                <!-- Paytm -->
+                <div class="upi-app-tile" data-app="Paytm">
+                  <div class="app-icon">
+                    <img src="assets/paytm.svg" alt="Paytm" class="app-logo-img">
+                  </div>
+                  <span class="app-label">Paytm UPI</span>
+                </div>
+
+                <!-- BHIM -->
+                <div class="upi-app-tile" data-app="BHIM UPI">
+                  <div class="app-icon">
+                    <img src="assets/bhim.svg" alt="BHIM" class="app-logo-img">
+                  </div>
+                  <span class="app-label">BHIM</span>
+                </div>
+
+                <!-- CRED -->
+                <div class="upi-app-tile" data-app="CRED Pay">
+                  <div class="app-icon">
+                    <img src="assets/cred.png" alt="CRED" class="app-logo-img cred-fix">
+                  </div>
+                  <span class="app-label">CRED Pay</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- UPI Sub 2: VPA -->
+            <div id="upiSubVpa" class="upi-sub-view">
+              <label for="vpaInput" class="form-label">Enter your Virtual Payment Address (UPI ID):</label>
+              <div class="vpa-input-group">
+                <input type="text" id="vpaInput" class="form-input" placeholder="e.g. 9820014321@upi or username@bank" value="">
+                <button type="button" class="btn-verify" id="btnVerifyVpa">Verify VPA</button>
+              </div>
+              <div id="vpaStatus" class="vpa-status-text" style="display: none;"></div>
+              <div class="handle-chips">
+                <span class="handle-chip" data-h="@okhdfcbank">@okhdfcbank</span>
+                <span class="handle-chip" data-h="@oksbi">@oksbi</span>
+                <span class="handle-chip" data-h="@okaxis">@okaxis</span>
+                <span class="handle-chip" data-h="@ybl">@ybl</span>
+                <span class="handle-chip" data-h="@paytm">@paytm</span>
+              </div>
+            </div>
+
+            <!-- UPI Sub 3: QR Code -->
+            <div id="upiSubQr" class="upi-sub-view">
+              <div class="qr-center-box">
+                <div class="qr-image-wrapper">
+                  <svg viewBox="0 0 140 140" width="140" height="140" fill="none">
+                    <rect width="140" height="140" fill="white"/>
+                    <rect x="10" y="10" width="36" height="36" rx="4" fill="#1E293B"/>
+                    <rect x="16" y="16" width="24" height="24" fill="white"/>
+                    <rect x="22" y="22" width="12" height="12" fill="#801438"/>
+
+                    <rect x="94" y="10" width="36" height="36" rx="4" fill="#1E293B"/>
+                    <rect x="100" y="16" width="24" height="24" fill="white"/>
+                    <rect x="106" y="22" width="12" height="12" fill="#801438"/>
+
+                    <rect x="10" y="94" width="36" height="36" rx="4" fill="#1E293B"/>
+                    <rect x="16" y="100" width="24" height="24" fill="white"/>
+                    <rect x="22" y="106" width="12" height="12" fill="#801438"/>
+
+                    <rect x="55" y="15" width="28" height="8" fill="#1E293B"/>
+                    <rect x="60" y="30" width="15" height="15" fill="#F49C14"/>
+                    <circle cx="67" cy="37" r="4" fill="#801438"/>
+                    <rect x="20" y="55" width="20" height="8" fill="#1E293B"/>
+                    <rect x="50" y="55" width="38" height="8" fill="#1E293B"/>
+                    <rect x="95" y="55" width="30" height="8" fill="#1E293B"/>
+                    <rect x="20" y="70" width="35" height="8" fill="#1E293B"/>
+                    <rect x="65" y="70" width="20" height="20" fill="#1E293B"/>
+                    <rect x="95" y="70" width="25" height="8" fill="#1E293B"/>
+                    <rect x="55" y="95" width="15" height="30" fill="#1E293B"/>
+                    <rect x="80" y="95" width="45" height="10" fill="#1E293B"/>
+                    <rect x="80" y="115" width="45" height="15" fill="#1E293B"/>
+                  </svg>
+                </div>
+                <div class="qr-timer">
+                  <span>Expires in: <strong id="qrTimer">04:59</strong></span>
+                </div>
+                <p class="qr-info">Scan with Google Pay, PhonePe, Paytm, BHIM, or any UPI app</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: DEBIT CARD (NOT PRE-FILLED, NO NAME) -->
+          <div class="tab-content" id="tabCard">
+            <div class="credit-warning-box">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              <span><strong>RBI Notice:</strong> Only <strong>Debit Cards</strong> are allowed for initial deposit. Credit Cards cannot be used to fund bank accounts.</span>
+            </div>
+
+            <div class="form-group">
+              <div class="label-row">
+                <label for="cardNum" class="form-label">Debit Card Number</label>
+                <span class="detected-network" id="cardNetworkLabel">RuPay / Visa / Mastercard</span>
+              </div>
+              <div class="input-with-badge">
+                <input type="text" id="cardNum" class="form-input" placeholder="Enter 16-digit debit card number" maxlength="19" value="">
+                <div class="network-badges">
+                  <span class="badge" id="badgeVisa">VISA</span>
+                  <span class="badge" id="badgeMastercard">MC</span>
+                  <span class="badge" id="badgeRupay">RuPay</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="cardExp" class="form-label">Expiry (MM/YY)</label>
+                <input type="text" id="cardExp" class="form-input" placeholder="MM/YY" maxlength="5" value="">
+              </div>
+              <div class="form-group">
+                <label for="cardCvv" class="form-label">CVV (3 Digits)</label>
+                <input type="password" id="cardCvv" class="form-input" placeholder="CVV" maxlength="3" value="">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cardName" class="form-label">Cardholder Name (as printed on card)</label>
+              <input type="text" id="cardName" class="form-input" placeholder="Name on card" value="">
+            </div>
+          </div>
+
+          <!-- TAB 3: NET BANKING WITH REAL BANK LOGOS -->
+          <div class="tab-content" id="tabNetBanking">
+            <p class="section-hint">Select your bank for instant authorization:</p>
+            <div class="popular-banks-grid">
+              <div class="bank-pill active" data-bank="State Bank of India">
+                <img src="assets/sbi.svg" alt="SBI" class="bank-logo-img">
+                <span>SBI</span>
+              </div>
+              <div class="bank-pill" data-bank="HDFC Bank">
+                <img src="assets/hdfc.svg" alt="HDFC" class="bank-logo-img">
+                <span>HDFC Bank</span>
+              </div>
+              <div class="bank-pill" data-bank="ICICI Bank">
+                <img src="assets/icici.svg" alt="ICICI" class="bank-logo-img">
+                <span>ICICI Bank</span>
+              </div>
+              <div class="bank-pill" data-bank="Axis Bank">
+                <img src="assets/axis.svg" alt="Axis" class="bank-logo-img">
+                <span>Axis Bank</span>
+              </div>
+              <div class="bank-pill" data-bank="Kotak Mahindra Bank">
+                <img src="assets/kotak.svg" alt="Kotak" class="bank-logo-img">
+                <span>Kotak</span>
+              </div>
+              <div class="bank-pill" data-bank="Punjab National Bank">
+                <img src="assets/pnb.svg" alt="PNB" class="bank-logo-img">
+                <span>PNB</span>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 16px;">
+              <label for="otherBankSelect" class="form-label">Or choose from other Indian banks:</label>
+              <select id="otherBankSelect" class="form-input">
+                <option value="">-- Select Bank --</option>
+                <option value="Bank of Baroda">Bank of Baroda</option>
+                <option value="Canara Bank">Canara Bank</option>
+                <option value="Union Bank of India">Union Bank of India</option>
+                <option value="IDBI Bank">IDBI Bank</option>
+                <option value="YES Bank">YES Bank</option>
+                <option value="Federal Bank">Federal Bank</option>
+                <option value="IDFC FIRST Bank">IDFC FIRST Bank</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- RBI Mandate Disclaimer Footer (NO NAME) -->
+          <div class="mandate-footer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v2h-2v-2zm0-10h2v8h-2V7z"/></svg>
+            <span><strong>RBI PMLA Rule:</strong> Payment must be made strictly from the applicant's own bank account linked to registered mobile (+91 98••••4321). Third-party transfers will be refunded.</span>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Breakdown & Submit CTA -->
+        <div class="order-summary-sidebar">
+          <div class="summary-card">
+            <h3 class="summary-title">Payment Summary</h3>
+
+            <div class="breakdown-table">
+              <!-- Item 1: Initial Funding (Default 10000) -->
+              <div class="breakdown-row highlight">
+                <div class="item-meta">
+                  <span class="item-name">Initial Account Funding</span>
+                  <span class="item-sub">100% credited to your account balance</span>
+                </div>
+                <span class="item-price">&#8377;10,000.00</span>
+              </div>
+
+              <!-- Item 2: Debit Card Fee -->
+              <div class="breakdown-row">
+                <div class="item-meta">
+                  <span class="item-name">Debit Card Issuance Fee</span>
+                  <span class="item-sub">Platinum Chip Debit Card</span>
+                </div>
+                <span class="item-price">&#8377;500.00</span>
+              </div>
+
+              <!-- Item 3: GST -->
+              <div class="breakdown-row">
+                <div class="item-meta">
+                  <span class="item-name">GST on Card Fee (18%)</span>
+                  <span class="item-sub">CGST (9%) + SGST (9%)</span>
+                </div>
+                <span class="item-price">&#8377;90.00</span>
+              </div>
+
+              <div class="divider"></div>
+
+              <!-- Total Payable -->
+              <div class="total-row">
+                <div>
+                  <span class="total-lbl">Total Amount Payable</span>
+                  <span class="total-sub">Includes taxes & charges</span>
+                </div>
+                <span class="total-val">&#8377;10,590.00</span>
+              </div>
+            </div>
+
+            <div class="credit-highlight-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span><strong>&#8377;10,000.00</strong> will be credited directly to your savings account.</span>
+            </div>
+
+            <!-- Primary Action Button -->
+            <button type="button" class="btn-submit-pay" id="btnPaySubmit">
+              <span id="btnPayText">Pay &#8377;10,590.00 Securely</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- API Status Indicator -->
+            <div id="apiProgressNote" style="display:none; font-size: 0.76rem; color: var(--indus-burgundy); margin-top: 10px; text-align: center; font-weight: 600;">
+              Connecting to CRM API...
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-icons-row">
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                <span>DICGC Insured</span>
+              </div>
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>RBI Authorized</span>
+              </div>
+              <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z"/></svg>
+                <span>PCI-DSS Validated</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- VIEW 2: THANK YOU / SUCCESS SCREEN (SHOWING DYNAMIC LEAD ID & CRM STATUS) -->
+    <div id="thankYouView" class="view-hidden">
+      <div class="thank-you-card">
+        
+        <div class="success-checkmark-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+
+        <h1 class="thank-you-heading">Thank You! Payment Successful</h1>
+        <p class="thank-you-sub">
+          Your initial funding of <strong>&#8377;10,000.00</strong> has been confirmed and credited to your new IndusInd Bank account ledger.
+        </p>
+
+        <!-- Digital Receipt Box -->
+        <div class="receipt-card">
+          <div class="receipt-header">
+            <div>
+              <span class="receipt-title">Transaction Receipt</span>
+              <span class="receipt-ref" id="dispTxnRef">IND-TXN-202610078832</span>
+            </div>
+            <span class="status-pill-success">SUCCESS</span>
+          </div>
+
+          <div class="receipt-body">
+            <div class="receipt-grid-row">
+              <span class="lbl">Registered Mobile</span>
+              <span class="val">+91 98••••4321</span>
+            </div>
+            <div class="receipt-grid-row">
+              <span class="lbl">Application Number</span>
+              <span class="val">IND-2026-9482103</span>
+            </div>
+            <div class="receipt-grid-row">
+              <span class="lbl">CRM Lead ID</span>
+              <span class="val" id="dispThankYouLeadId">20964</span>
+            </div>
+            <div class="receipt-grid-row">
+              <span class="lbl">Account Variant</span>
+              <span class="val">Indus Delite Savings (Zero Balance)</span>
+            </div>
+            <div class="receipt-grid-row">
+              <span class="lbl">Payment Method</span>
+              <span class="val" id="dispSuccessMode">UPI (Google Pay)</span>
+            </div>
+            <div class="receipt-grid-row">
+              <span class="lbl">Bank UTR Number</span>
+              <span class="val" id="dispUtrNum">INDB39847192847</span>
+            </div>
+            <div class="receipt-grid-row">
+              <span class="lbl">Date & Timestamp</span>
+              <span class="val" id="dispTimestamp">07 Oct 2026, 12:20 AM IST</span>
+            </div>
+
+            <div class="receipt-divider"></div>
+
+            <div class="receipt-grid-row">
+              <span class="lbl">Initial Account Funding</span>
+              <span class="val">&#8377;10,000.00</span>
+            </div>
+            <div class="receipt-grid-row">
+              <span class="lbl">Debit Card Fee & 18% GST</span>
+              <span class="val">&#8377;590.00</span>
+            </div>
+            <div class="receipt-grid-row total-highlight">
+              <span class="lbl">Total Amount Paid</span>
+              <span class="val price">&#8377;10,590.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CRM Live Update Status Box -->
+        <div class="next-step-box">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <div id="dispCrmStatusMsg">
+            <strong>CRM Updated Successfully:</strong> Lead #<span id="dispLeadIdInMsg">20964</span> status updated to <em>"Intial Fund Collected"</em>. Welcome kit and debit card dispatch initiated.
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div class="thank-you-actions">
+          <button type="button" class="btn-print" onclick="window.print()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span>Download / Print Receipt</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 IndusInd Bank Limited. Member of DICGC. All Rights Reserved.</span>
+      <span>Assistance: 1860 267 7777</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
